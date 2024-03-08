@@ -4,8 +4,8 @@ export const headerLinks = [
       route: '/',
     },
     {
-      label: 'Create Event',
-      route: '/events/create',
+      label: 'Add Training',
+      route: '/Trainings/Add',
     },
     {
       label: 'My Profile',
@@ -13,7 +13,7 @@ export const headerLinks = [
     },
   ]
   
-  export const eventDefaultValues = {
+  export const trainingDefaultValues = {
     title: '',
     description: '',
     location: '',

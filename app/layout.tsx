@@ -6,8 +6,8 @@ import { ClerkProvider } from '@clerk/nextjs'
 const poppins = Poppins({ subsets: ["latin"],weight:['400','500','600','700'],variable:'--font-poppins' });
 
 export const metadata: Metadata = {
-  title: "Evenmony",
-  description: "A Platform for Event Management",
+  title: "Train Your Brain",
+  description: "A Platform for Hard and Soft Skills Training",
   icons:{
     icon: '/assets/images/logo.svg'
   }

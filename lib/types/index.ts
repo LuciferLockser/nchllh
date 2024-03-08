@@ -15,27 +15,28 @@ export type UpdateUserParams = {
   photo: string
 }
 
-// ====== EVENT PARAMS
-export type CreateEventParams = {
-  userId: string
-  event: {
-    title: string
-    description: string
-    location: string
-    imageUrl: string
-    startDateTime: Date
-    endDateTime: Date
-    categoryId: string
-    price: string
-    isFree: boolean
-    url: string
-  }
-  path: string
-}
+// ====== TRAINING PARAMS
+export type CreateTrainingParams = {
+  userId: string;
+  training: {
+    title: string;
+    description: string;
+    location: string;
+    imageUrl: string;
+    startDateTime: Date;
+    endDateTime: Date;
+    categoryId: string;
+    price: string;
+    isFree: boolean;
+    url?: string | null;  
+  };
+  path: string;
+};
 
-export type UpdateEventParams = {
+
+export type UpdateTrainingParams = {
   userId: string
-  event: {
+  training: {
     _id: string
     title: string
     imageUrl: string
@@ -46,37 +47,37 @@ export type UpdateEventParams = {
     categoryId: string
     price: string
     isFree: boolean
-    url: string
+    url: string | null
   }
   path: string
 }
 
-export type DeleteEventParams = {
-  eventId: string
+export type DeleteTrainingParams = {
+  trainingId: string
   path: string
 }
 
-export type GetAllEventsParams = {
+export type GetAllTrainingsParams = {
   query: string
   category: string
   limit: number
   page: number
 }
 
-export type GetEventsByUserParams = {
+export type GetTrainingsByUserParams = {
   userId: string
   limit?: number
   page: number
 }
 
-export type GetRelatedEventsByCategoryParams = {
+export type GetRelatedTrainingsByCategoryParams = {
   categoryId: string
-  eventId: string
+  trainingId: string
   limit?: number
   page: number | string
 }
 
-export type Event = {
+export type Training = {
   _id: string
   title: string
   description: string
@@ -105,30 +106,30 @@ export type CreateCategoryParams = {
 
 // ====== ORDER PARAMS
 export type CheckoutOrderParams = {
-  eventTitle: string
-  eventId: string
+  trainingTitle: string
+  trainingId: string
   price: string
   isFree: boolean
   buyerId: string
 }
 
 export type CreateOrderParams = {
-  stripeId: string
-  eventId: string
-  buyerId: string
-  totalAmount: string
-  createdAt: Date
-}
+  trainingId: string;
+  buyerId: string;
+  totalAmount: string;
+  createdAt: Date;
+};
 
-export type GetOrdersByEventParams = {
-  eventId: string
+
+export type GetOrdersByTrainingParams = {
+  trainingId: string
   searchString: string
 }
 
 export type GetOrdersByUserParams = {
   userId: string | null
   limit?: number
-  page: string | number | null
+  page: number 
 }
 
 // ====== URL QUERY PARAMS
