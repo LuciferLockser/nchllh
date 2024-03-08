@@ -2,7 +2,7 @@
 import { revalidatePath } from 'next/cache';
 import { connectToDatabase } from '../database';
 import Category from '../database/models/category.model';
-import Training from '../database/models/Event.model';
+import Training from '@/lib/database/models/Event.model';
 import User from '../database/models/user.model';
 import { handleError } from '../utils';
 import { CreateTrainingParams, UpdateTrainingParams, DeleteTrainingParams, GetAllTrainingsParams, GetTrainingsByUserParams, GetRelatedTrainingsByCategoryParams } from './../types/index';
